@@ -1,0 +1,170 @@
+.fonts {
+
+    font-family: 'Crimson Text', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.about-page-container {
+    width: 100vw;
+    height: 100%;
+}
+
+
+
+.about-store_image-content {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-image: url("../../Assets/bg1.png");
+    background-size: cover;
+}
+
+.about-page-content {
+    width: 50%;
+    margin-right: 3rem
+}
+
+.about-page-title {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-family: 'Crimson Text', serif;
+    color: white;
+}
+
+
+.about-page-des {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Crimson Text', serif;
+    color: white;
+
+}
+
+
+@media screen and (max-width: 822px) {
+
+    .about-store_image-content {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-page-content {
+        width: 100%;
+        margin: 0.5rem
+    }
+
+    .about-page-image {
+        height: 35vh;
+        width: 60vw;
+
+    }
+
+    .about-page-title {
+        font-size: 2.3rem;
+        text-align: center;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        font-family: 'Crimson Text', serif;
+    }
+
+    .about-page-des {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-family: 'Crimson Text', serif;
+
+    }
+
+}
+
+.meet-team-section {
+    
+    margin: 1rem
+}
+
+
+.meet-title {
+    font-size: 3rem;
+    font-family: 'Crimson Text', serif;
+    text-align: center;
+    color: #F40008;
+    ;
+}
+
+.meet-desc {
+    font-size: 2rem;
+    font-family: 'Crimson Text', serif;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.team_members-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+
+.team_numberImage {
+    background-image: url(../../Assets/team1.png);
+    height: 20rem;
+    width: 20rem;
+    background-size: cover;
+    margin: 1rem;
+    margin-right: 3rem;
+    position: relative;
+
+}
+
+.team-member-container {
+    background-color: aliceblue;
+    padding: 1rem;
+    width: 95%;
+    position: absolute;
+    top: 15rem;
+    left: 3rem;
+    height: 30%;
+}
+
+.team-member-name {
+    font-size: 1.5rem;
+
+}
+
+
+@media screen and (max-width: 822px) {
+    .meet-title {
+        font-size: 2rem;
+    }
+
+    .meet-desc {
+        font-size: 1rem;
+    }
+
+    .team_numberImage {
+        margin-right: 1rem;
+
+    }
+
+    .team-member-container {
+        left: 1.5rem;
+    }
+
+
+    .about-store_image-content {
+        padding: 1rem;
+        margin: auto;
+    }
+
+}

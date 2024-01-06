@@ -1,0 +1,162 @@
+.nav-container {
+    height: 5rem;
+    width: 100vw;
+    padding: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.43);
+    background: white;
+}
+
+
+.logo {
+    height: 10vh;
+
+}
+
+
+
+.nav_link {
+    margin: 2vw;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: large;
+
+}
+
+.nav_link:hover {
+    color: #F40008;
+    border-bottom: 2px solid #F40008;
+}
+
+
+.nav_button {
+    border: none;
+    background-color: #F40008;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    width: 8vw;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    position: relative;
+    background-size: cover;
+
+}
+
+
+.nav_button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(.95);
+
+}
+
+
+
+.menuIcon {
+    font-size: 3rem;
+    display: none;
+    cursor: pointer;
+}
+
+.menuIcon:hover {
+    background-color: white;
+    color: #F40008;
+    border-radius: 5px;
+
+}
+
+
+
+
+
+@media screen and (max-width: 822px) {
+    .nav-container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .nav_items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+
+    }
+
+
+    .nav_button {
+        display: none;
+    }
+
+    .nav_link {
+        display: none;
+    }
+
+    .menuIcon {
+        display: flex;
+        font-size: 2.7rem;
+        color: #F40008;
+
+    }
+
+
+}
+
+
+.mobile_nav_items {
+    display: none;
+    position: fixed;
+    top: 3rem;
+    right: 0;
+    height: 30%;
+    width: 70%;
+    z-index: 90;
+    background-color: #ffffff;
+    color: #F40008;
+    box-shadow: -5px 0 10px white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.closeIcon {
+    font-size: 2rem;
+    position: absolute;
+    top:-1rem;
+
+}
+
+.mobileListItem {
+    cursor: pointer;
+    margin: 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: black
+}
+
+
+.mobileListItem:hover {
+    border-bottom: 2px solid #F40008;
+    color: #F40008;
+
+}
