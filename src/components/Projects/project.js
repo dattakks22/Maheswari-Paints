@@ -2,11 +2,13 @@ import React from "react";
 
 import './project.css'
 
+import NavBar from "../Navbar/navbar";
+
 const Project = () => {
     return (
-        <div>
-            Project Page
-        </div>
+        <>
+        <NavBar/>
+        </>
     )
 }
 

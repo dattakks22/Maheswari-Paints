@@ -1,0 +1,94 @@
+/* Base styles for all devices */
+.contect-page-container {
+   padding-left: 0.5rem;
+}
+
+.contect-page-title {
+    font-size: 3rem;
+    text-align: center;
+    color: #F40008;
+}
+
+.contact_form-contect {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.contect_address {
+    text-align: center;
+    color: #F40008;
+    width: 50%
+}
+
+.contact_page_contect {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact_icon {
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.contact_address {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Form styles */
+.contact_page_form {
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.name_input,
+.phone_input,
+.pincode_input,
+.requre_input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact_form_button {
+    background-color: #F40008;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+
+
+@media screen and (max-width:822px) {
+
+    .contact_form-contect {
+        flex-direction: column;
+    }
+
+    .contect_address {
+        width: 90%;
+        order: 2;
+        margin-top: 2rem
+    }
+
+    .contact_address {
+        color: #333;
+        font-size: 1rem;
+    }
+
+
+    .contact_page_form {
+        width: 100%;
+    }
+
+}

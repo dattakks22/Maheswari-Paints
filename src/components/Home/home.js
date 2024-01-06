@@ -31,6 +31,11 @@ import SlideImagesSection from "../ImagesSection/images";
 
 
 class Home extends Component {
+
+    ContectPage = () => {
+        this.props.history.push("/contectUs");
+      };
+
     render() {
         return (
             <> <NavBar />
@@ -59,7 +64,7 @@ class Home extends Component {
                             <p className="about_dec">When renovating or constructing any office or house, painting is one of the key elements in converting any
                                 space into something new and appealing. Painting your house or even office can help change the entire mood of the room and make it seem different.
                                 Paint Dealers in Vijayawada help customers to choose the correct paint option in their budget.</p>
-                            <button className="aboutBtn" type="button" >Contact Us</button>
+                            <button className="aboutBtn" type="button"  onClick={this.ContectPage} >Contact Us</button>
                         </div>
                         <img className="aboutimg" src={paintImg} alt="aboutImg" />
                     </div>
@@ -69,7 +74,7 @@ class Home extends Component {
                         <div className="title_content_2">
                             <h1 className="aboutTitle_2">Why Choose Us ? </h1>
                             <p className="about_dec_2">Choosing between just one or two of the various brands that are all available in the market could be intimidating. Paint dealers will help you based on your budget and requirement.</p>
-                            <button className="aboutBtn_2" type="button" >Contact Us</button>
+                            <button className="aboutBtn_2" type="button" onClick={this.ContectPage} >Contact Us</button>
                         </div>
                     </div>
 
