@@ -12,12 +12,17 @@
     top: 0;
     z-index: 3;
     box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.43);
-    background: white;
+   background:white;
+    background-size:auto;
+    
+    
+    
 }
 
 
 .logo {
-    height: 10vh;
+    height: 5rem;
+
 
 }
 
@@ -27,7 +32,10 @@
     margin: 2vw;
     cursor: pointer;
     font-weight: 700;
-    font-size: large;
+    font-size: 1.2rem;
+    color:black;
+    font-family: 'Poppins', sans-serif;
+    
 
 }
 

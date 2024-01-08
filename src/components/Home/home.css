@@ -964,12 +964,15 @@
     align-items: center;
     justify-content: space-between;
     box-shadow: 2px 5px 3px 6px rgba(0, 0, 0, 0.43);
+    background-image: url(../../Assets/footer.png);
+    background-size: cover;
+    color: white;
 
 }
 
 .footer_title {
     font-size: 1.2rem;
-    color: #F40008;
+    color: white;
     font-weight: 400;
     background: transparent;
   
@@ -981,7 +984,7 @@
 
 .footer_title_2 {
     font-size: 1.2rem;
-    color: #F40008;
+    
     font-weight: 400;
     background: transparent;
    

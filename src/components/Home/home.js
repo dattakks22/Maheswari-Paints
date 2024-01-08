@@ -1,4 +1,6 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
+
+import emailjs from '@emailjs/browser';
 
 import './home.css'
 
@@ -36,7 +38,33 @@ class Home extends Component {
         this.props.history.push("/contectUs");
       };
 
+
+    form = React.createRef();
+
+    sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_3k4oicp', 'template_5e61jd5', this.form.current, 'hr9zTQR-xESg1OVO3')
+          .then((result) => {
+            console.log(result.text);
+            console.log("message sent");
+            e.target.reset();
+            alert("email Sent !");
+          }, (error) => {
+            console.log(error.text);
+          });
+      };
+
+
+    
+
+
     render() {
+
+       
+
+
+
         return (
             <> <NavBar />
                 <section className="home_container">
@@ -45,13 +73,18 @@ class Home extends Component {
                     <div className="text-form-container">
                         <h1 className="homeTitle">Transforming Homes into <br /> <span className="boldTitle">Beautiful Homes </span>: Bringing Life to Your Walls</h1>
 
-                        <form className="form-container">
+
+
+                        <form className="form-container" ref={this.form} onSubmit={this.sendEmail}>
                             <h1 className="formTitle">Get in touch with us</h1>
-                            <input type="text" className="inputname" placeholder="Enter your name" />
-                            <input type="tel" className="inputnum" placeholder="Your Mobile Number" />
-                            <input type="number" className="inputpin" placeholder="Your Pincode" />
-                            <button type="submit" className="formBtn" >Submit</button>
+                            <input type="text" className="inputname" placeholder="Enter your name" name="user_name"/>
+                            <input type="tel" className="inputnum" placeholder="Your Mobile Number" name="user_email" />
+                            <input type="number" className="inputpin" placeholder="Your Pincode" name="message" />
+                            <button type="submit" className="formBtn" value="Send">Submit</button>
                         </form>
+
+
+
                     </div>
                 
 

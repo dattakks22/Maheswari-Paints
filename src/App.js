@@ -9,9 +9,9 @@ const App = () => (
   
     <Switch>
       <Route exact path="/"  component={Home} />
-      <Route exact path="/about" component={About} />
-      <Route exact path="/project" component={Project} />
-      <Route exact path='/contectUs' component={Contect}/>
+      <Route  path="/about" component={About} />
+      <Route  path="/project" component={Project} />
+      <Route path='/contectUs' component={Contect}/>
       <Redirect to="/not-found" />
     </Switch>
 

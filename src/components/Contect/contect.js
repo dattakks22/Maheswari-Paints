@@ -1,4 +1,5 @@
-import React from "react";
+import React, {Component} from "react";
+import emailjs from '@emailjs/browser';
 
 import "./contect.css"
 import NavBar from "../Navbar/navbar";
@@ -16,9 +17,28 @@ import imagemap from '../../Assets/Vijayawada-Google-My-Maps.png';
 
 import { FaCopyright } from "react-icons/fa";
 
-const Contect = () => {
-    return (
-        <>
+
+class Contect extends Component {
+
+    form = React.createRef();
+
+    sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_3k4oicp', 'template_5e61jd5', this.form.current, 'hr9zTQR-xESg1OVO3')
+          .then((result) => {
+            console.log(result.text);
+            console.log("message sent");
+            e.target.reset();
+            alert("email Sent !");
+          }, (error) => {
+            console.log(error.text);
+          });
+      };
+
+    render(){
+        return(
+            <>
             <NavBar />
             <section className="contect-page-container">
                 <h1 className="contect-page-title">Contact</h1>
@@ -42,18 +62,18 @@ const Contect = () => {
                         </div>
                     </div>
 
-                    <form className="contact_page_form">
+                    <form className="contact_page_form" ref={this.form} onSubmit={this.sendEmail} >
                         <label for="nameInput" className="contactInput_name">Name </label>
-                        <input id="nameInput" className="name_input" type="text" />
+                        <input id="nameInput" className="name_input" type="text" name="user_name" />
                         <label for="phoneInput" className="contactInput_phone">Phone Number</label>
-                        <input id="phoneInput" className="phone_input" type="tel" />
+                        <input id="phoneInput" className="phone_input" type="tel" name="user_email"/>
                         <label for="pincodeInput" className="contactInput_pincode">Pincode</label>
                         <input id="pincodeInput" className="pincode_input" type="number" placeholder="Enter Your pincode" />
 
                         <label for="requirementInput" className="contact_req" > Mention your requirement </label>
-                        <input id="requirementInput" className="requre_input" placeholder="Type Your requirement." />
+                        <input id="requirementInput" className="requre_input" placeholder="Type Your requirement."name="message" />
 
-                        <button className="contact_form_button" type="submit">Submit</button>
+                        <button className="contact_form_button" type="submit" value="Send">Submit</button>
                     </form>
 
 
@@ -95,8 +115,12 @@ const Contect = () => {
 
 
         </>
-    )
+        )
+    }
 }
+
+
+
 
 
 export default Contect;
